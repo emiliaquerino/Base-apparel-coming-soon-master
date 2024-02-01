@@ -22,6 +22,7 @@ html {
     font-family: 'Quicksand', sans-serif;
     font-size: 16px;
     background: var(--desaturated-red-light);
+}
 
 p {
     font-family: 'Josefin Sans', sans-serif;
@@ -37,9 +38,10 @@ p {
     margin: 20px;
 }
 
-.banner {
-    width: 100vw;
+.picture {
+    width: 100%;
 }
+
 
 h1 {
     text-transform: uppercase;
@@ -73,6 +75,7 @@ h1 {
 label {
     display: flex;
     justify-content: center;
+    margin-bottom: 100px;
 }
 
 input {
@@ -87,6 +90,7 @@ button {
     border: none;
     padding: 10px 20px;
     border-radius: 20px;
+    margin-left: -30px;
 }
 
 
