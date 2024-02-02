@@ -26,6 +26,10 @@ html {
     background: var(--desaturated-red-light);
 }
 
+img {
+    max-width: 100%;
+  }
+  
 p {
     font-family: 'Josefin Sans', sans-serif;
     color: var(--desaturated-red);
