@@ -120,3 +120,53 @@ img {
     display: none;
   }
   
+  /*------responsive------*/
+
+  @media (min-width: 768px) {
+    body {
+      background: url("./images/bg-pattern-desktop.svg") no-repeat center/cover;
+    }
+  
+    main {
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    main section {
+      flex: 1;
+    }
+  
+    main section picture img {
+      margin-top: -4rem;
+    }
+  
+    main section:first-child {
+      text-align: left;
+    }
+  
+    .logo {
+      display: block;
+    }
+  
+    main h1 {
+      font-size: 4rem;
+      width: 500px;
+    }
+  
+    main section:first-child p {
+      width: 500px;
+    }
+  
+    form input {
+      width: 500px;
+    }
+  
+    form label {
+      right: 340px;
+    }
+  
+    form button {
+      right: 250px;
+    }
+  }
