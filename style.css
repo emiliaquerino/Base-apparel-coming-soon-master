@@ -124,7 +124,7 @@ img {
 
   @media (min-width: 768px) {
     body {
-      background: url("./images/bg-pattern-desktop.svg") no-repeat center/cover;
+      background: url("images/bg-pattern-desktop.svg") no-repeat center/cover;
     }
   
     main {
