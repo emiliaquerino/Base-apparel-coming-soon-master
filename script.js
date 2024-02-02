@@ -1,23 +1,26 @@
-<script>
-  function validateEmail() {
-    var emailInput = document.getElementById('email');
-    var errorMessage = document.getElementById('error-message');
-    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const submit = document.querySelector(".submit")
+const error = document.querySelector(".error")
+const form = document.querySelector("form")
+const input = document.querySelector("input")
+const label = document.querySelector("label")
 
-    if (emailRegex.test(emailInput.value)) {
-      // Email válido
-      errorMessage.textContent = '';
-    } else {
-      // Email inválido
-      errorMessage.textContent = 'Formato de email inválido';
-    }
+form.addEventListener("submit", validate)
+submit.addEventListener("click", validate)
+
+function validate(e) {
+  e.preventDefault()
+
+  const inputValue = input.value.trim()
+
+  if (!isEmail(inputValue)) {
+    error.style.display = "block"
+    label.style.display = "block"
+  } else {
+    error.style.display = "none"
+    label.style.display = "none"
   }
+}
 
-  function validateForm() {
-    validateEmail(); // Chama a função de validação do e-mail
-
-    // Adicione aqui mais validações ou ações que você deseja realizar antes de enviar o formulário
-    
-    return false; // Isso impede o envio automático do formulário
-  }
-</script>
+function isEmail(input) {
+  return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(input)
+}
