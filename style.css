@@ -141,7 +141,8 @@ form button:hover {
   }
 
   main article {
-    flex: 1; 
+    flex: 1;
+  }
 
   main article picture img {
     margin-top: -6rem;
@@ -179,4 +180,4 @@ form button:hover {
     right: 190px;
   }
 
-}}
+}
