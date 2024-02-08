@@ -20,6 +20,11 @@ body {
   font-size: 16px;
 }
 
+.logo {
+  display: flex;
+  margin: 2rem;
+}
+
 img {
   max-width: 100%;
 }
@@ -30,13 +35,6 @@ img {
   opacity: 0.3;
 }
 
-.logo, .logo-2 {
-  padding: 1.5rem;
-}
-
-.logo-2 {
-  display: none;
-}
 
 main {
   display: flex;
@@ -58,17 +56,9 @@ main h1 span {
   font-weight: 300;
 }
 
-main section:first-child {
-  padding: 0 1.5rem 2rem;
-}
-
 main section:first-child p {
   color: var(--desaturated-red);
   line-height: 1.6;
-}
-
-main section .logo {
-  display: none;
 }
 
 main section picture img {
@@ -105,6 +95,7 @@ form button {
   padding: 0.8rem 2rem;
   cursor: pointer;
   transition: 0.3s;
+  box-shadow: 0 5px 10px hsl(0deg 36% 70% / 60%);
 }
 
 form label {
@@ -126,64 +117,85 @@ form button:hover {
   display: none;
 }
 
+.text-info {
+  padding: 0 1.5rem 2rem;
+}
+
 .content-section {
   text-align: center;
 }
 
-.image-section {
+.image-section-one {
   background-image: url("./images/hero-mobile.jpg");
   background-size: cover;
   min-height: 50vh;
+  width: 100%;
 }
 
 
 /* responsive*/
 @media (min-width: 768px) {
   body {
-    background: url("./images/bg-pattern-desktop.svg") no-repeat center/cover;
-  }
-
-  main {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-  }
-
-  main section, form {
-    width: 50%;
+    background: url("./images/bg-pattern-desktop.svg") no-repeat center/cover;  
   }
 
   .logo {
-    display: none;
+    margin: 30px 0px;
   }
 
-  .logo-2 {
-    display: block;
-    text-align: left;
-    padding-top: 3rem
+  main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
+
+  main section, form {
+    width: 100%;
+  }
+
+  main section:first-child {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0rem 0rem 0rem 6rem;
+    gap: 2rem;
+  }
+
 
   main h1 {
-    font-size: 3rem;
+    font-size: 4rem;
     text-align: left;
-    padding: .5rem 1.3rem 1rem;
+    padding: 7rem 0rem 0rem;
+    letter-spacing: 1rem;
   }
 
   p {
     text-align: left;
-    padding-left: 1.3rem;
+  }
+
+  .text-info {
+    padding-right: 18rem;
+    padding-left: 0;
   }
 
   .image-section {
     background-image: url("./images/hero-desktop.jpg");
-    min-height: 100vh;
+    height: 100vh;
+    width: 80%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .image-section-one {
+    display: none;
+  }
+
+  form {
+    margin: 0;
   }
 
   .content-section {
-    min-height: 100vh;
+    text-align: center;
+    padding: 1px;
   }
-
-  form input {
-    margin-left: 1rem;
-  }
-}
+ }
